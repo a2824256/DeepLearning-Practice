@@ -11,6 +11,38 @@ https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/FCN.ipyn
 
 ### VGG16
 https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/VGG16.ipynb
+## pytorch常用函数
+- Conv2d(in_channels, out_channels, kernel_size, stride=1,
+                 padding=0, dilation=1, groups=1,
+                 bias=True, padding_mode='zeros')
+
 ## 相关资料
 ### 关于baseline和benchmark的说明
 https://www.zhihu.com/question/22529709
+
+### tensorflow中SAME和VALID之间的区别
+> 这两个概念原来是出自计算机视觉里的，目的是对图片的扩展。现在到了图像卷积这里也是如此。我们在卷积的时候卷积核的移动往往会跳出图片或者丢弃一小部分像素点。从结果上影响上来说，二者好像没多大影响，你可以这么认为，一张图片上的边缘像素点一般都不会有重要特征的，除非是抓拍拍下的对象偏移，处在了边缘。既然这样那么我们还是有必要弄清楚二者的计算关系。
+
+> SAME：这种padding方法法在tensorflow中就是为了保证输入和输出的结构一致。那么几个padding能做到就看图片尺度了。这种情况一般步长都为1：
+
+官方API给出的计算方法如下：
+
+```
+
+          out_height = ceil(float(input_height)/float(strides[0]))
+
+          out_width = ceil(float(input_weight)/float(strides[1]))
+
+```
+
+> VALID:这种padding就是没有padding，就是在卷积核不长不足或者超出的部分直接舍去，这样得到的输出相比输入尺寸较小。当然VALID也可以实现输出相同，那就是如AlexNet中采用一个group，将其切开交替卷积，这样做得到的结果和加入padding一样，即能够保持输入输出一种。不过参与卷积的像素有所不同，即不全为零。这也是个了不起的trick。
+
+官方API给出的计算方法如下：
+
+```
+
+               out_height = ceil(float(in_height - filter_height + 1) / float(strides[1]))
+
+               out_width = ceil(float(in_width - filter_width + 1) / float(strides[2]))
+
+```
