@@ -1,15 +1,17 @@
 ## 神经网络
-### LeNet-5
-Jupyter Notebook - Pytorch版本: <br/>
+#### LeNet-5
+Pytorch版本: <br/>
 https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/LeNet.ipynb
 <br/>
 Paper下载地址:<br/>
 https://www.researchgate.net/publication/2985446_Gradient-Based_Learning_Applied_to_Document_Recognition 
 <br/>
-### FCN
+#### FCN
+Pytorch版本: <br/>
 https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/FCN.ipynb
 
-### VGG16
+#### VGG16
+Pytorch版本: <br/>
 https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/VGG16.ipynb
 ## pytorch常用函数及形参
 - Conv2d(in_channels, out_channels, kernel_size, stride=1,
