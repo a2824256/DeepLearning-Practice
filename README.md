@@ -11,12 +11,43 @@ https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/FCN.ipyn
 
 ### VGG16
 https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/VGG16.ipynb
-## pytorch常用函数
+## pytorch常用函数及形参
 - Conv2d(in_channels, out_channels, kernel_size, stride=1,
                  padding=0, dilation=1, groups=1,
                  bias=True, padding_mode='zeros')
-
+## 环境配置
+> 推荐使用conda
+### conda添加国内源
+> 清华源
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+```
+> pytorch源
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+```
+> 中科大源
+```
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
+```
+#### 设置搜索时显示通道地址
+```conda config --set show_channel_urls yes```
+#### 部分库conda安装指令
+- 安装cv2库： <br/>
+```conda install --channel https://conda.anaconda.org/menpo opencv```
+- 安装pytorch以及torchvision库： <br/>
+```conda install pytorch torchvision -c pytorch```
 ## 相关资料
+### 框架对比
+#### Pytorch
+- 不需要定义输入图像大小
 ### 关于baseline和benchmark的说明
 https://www.zhihu.com/question/22529709
 
@@ -28,11 +59,8 @@ https://www.zhihu.com/question/22529709
 官方API给出的计算方法如下：
 
 ```
-
-          out_height = ceil(float(input_height)/float(strides[0]))
-
-          out_width = ceil(float(input_weight)/float(strides[1]))
-
+out_height = ceil(float(input_height)/float(strides[0]))
+out_width = ceil(float(input_weight)/float(strides[1]))
 ```
 
 > VALID:这种padding就是没有padding，就是在卷积核不长不足或者超出的部分直接舍去，这样得到的输出相比输入尺寸较小。当然VALID也可以实现输出相同，那就是如AlexNet中采用一个group，将其切开交替卷积，这样做得到的结果和加入padding一样，即能够保持输入输出一种。不过参与卷积的像素有所不同，即不全为零。这也是个了不起的trick。
@@ -40,9 +68,6 @@ https://www.zhihu.com/question/22529709
 官方API给出的计算方法如下：
 
 ```
-
-               out_height = ceil(float(in_height - filter_height + 1) / float(strides[1]))
-
-               out_width = ceil(float(in_width - filter_width + 1) / float(strides[2]))
-
+out_height = ceil(float(in_height - filter_height + 1) / float(strides[1]))
+out_width = ceil(float(in_width - filter_width + 1) / float(strides[2]))
 ```
