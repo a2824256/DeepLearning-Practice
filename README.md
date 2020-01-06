@@ -6,11 +6,11 @@ https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/LeNet.ip
 Paper下载地址:<br/>
 https://www.researchgate.net/publication/2985446_Gradient-Based_Learning_Applied_to_Document_Recognition 
 <br/>
-#### FCN
+#### FCN(实现中)
 Pytorch版本: <br/>
 https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/FCN.ipynb
 
-#### VGG16
+#### VGG16(实现中)
 Pytorch版本: <br/>
 https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/VGG16.ipynb
 ## pytorch常用函数及形参
