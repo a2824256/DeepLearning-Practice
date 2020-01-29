@@ -1,3 +1,5 @@
+## 学习资料 - 卷积等算法
+https://github.com/a2824256/DeepLearning-Practice/blob/master/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99.md
 ## 神经网络
 #### LeNet-5
 Pytorch版本: <br/>
