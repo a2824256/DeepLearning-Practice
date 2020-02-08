@@ -43,6 +43,7 @@ precision: 收敛精度
 def gradient_descent(x, max_iter, learning_rate, precision):
     for i in range(max_iter):
         grad_value = obj_grad(x)
+        # 梯度趋向于0时，视为收敛，梯度为零视为局部最优解
         if abs(grad_value) < precision:
             break
         x = x - grad_value * learning_rate
