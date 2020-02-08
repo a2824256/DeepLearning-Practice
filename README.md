@@ -48,6 +48,9 @@ conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
 ```conda install --channel https://conda.anaconda.org/menpo opencv```
 - 安装pytorch以及torchvision库： <br/>
 ```conda install pytorch torchvision -c pytorch```
+#### pip使用清华源安装TensorFlow-GPU
+pip install -i https://pypi.douban.com/simple/ tensorflow-gpu==1.15
+
 ## 相关资料
 ### 框架对比
 #### Pytorch
