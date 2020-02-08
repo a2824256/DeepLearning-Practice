@@ -52,9 +52,6 @@ conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
 pip install -i https://pypi.douban.com/simple/ tensorflow-gpu==1.15
 
 ## 相关资料
-### 框架对比
-#### Pytorch
-- 不需要定义输入图像大小
 ### 关于baseline和benchmark的说明
 https://www.zhihu.com/question/22529709
 ### end to end(端对端)模型的理解

@@ -9,7 +9,7 @@ def obj_func(x):
     return x ** 2
 
 
-# 目标梯度，梯度可理解为目标函数的导数，高等数学里面求导的结果能表示函数的变化趋势，x < 0代表下降,越小斜率越大; x > 0代表上升，越大也是斜率越大
+# 目标梯度，梯度可理解为目标函数的导数，高等数学里面求导的结果能表示函数的变化趋势，x < 0代表下降趋势, x > 0代表上升趋势
 def obj_grad(x_input):
     x = sympy.Symbol("x")
     # 对函数进行求导, 结果为 2 * x
@@ -43,7 +43,7 @@ precision: 收敛精度
 def gradient_descent(x, max_iter, learning_rate, precision):
     for i in range(max_iter):
         grad_value = obj_grad(x)
-        # 梯度趋向于0时，视为收敛，梯度为零视为局部最优解
+        # 梯度趋向于0时，视为收敛，梯度为零视为局部最优解，即高数里的极值
         if abs(grad_value) < precision:
             break
         x = x - grad_value * learning_rate
@@ -52,4 +52,4 @@ def gradient_descent(x, max_iter, learning_rate, precision):
     draw(x, obj_func(x))
 
 if __name__ == '__main__':
-    gradient_descent(5, 100, 0.01, 0.0001)
+    gradient_descent(-5, 100, 0.01, 0.0001)
