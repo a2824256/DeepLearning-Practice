@@ -1,4 +1,3 @@
-# import tensorflow as tf
 import sympy
 import matplotlib.pyplot as plt
 from numpy import *
@@ -50,6 +49,7 @@ def gradient_descent(x, max_iter, learning_rate, precision):
         print("第", i, "次迭代x的值为:", x)
     print("得到局部最小值时为x=", x, ", y=", obj_func(x))
     draw(x, obj_func(x))
+
 
 if __name__ == '__main__':
     gradient_descent(-5, 100, 0.01, 0.0001)
