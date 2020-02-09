@@ -15,10 +15,8 @@ https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/FCN.ipyn
 #### VGG16(实现中)
 Pytorch版本: <br/>
 https://github.com/a2824256/DeepLearning-Practice/blob/master/notebooks/VGG16.ipynb
-## pytorch常用函数及形参
-- Conv2d(in_channels, out_channels, kernel_size, stride=1,
-                 padding=0, dilation=1, groups=1,
-                 bias=True, padding_mode='zeros')
+## TensorFlow入门
+https://github.com/a2824256/DeepLearning-Practice/tree/master/notebooks/tf_teach
 ## 环境配置
 > 推荐使用conda
 ### conda添加国内源
