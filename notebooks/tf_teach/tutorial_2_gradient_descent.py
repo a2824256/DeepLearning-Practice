@@ -31,14 +31,7 @@ def draw(x,y):
     plt.show()
 
 
-"""
-grad: 梯度函数
-x: x的初始值
-max_iter: 最大迭代次数
-learning_rate: 学习率
-precision: 收敛精度
-"""
-
+# grad: 梯度函数  x: x的初始值  max_iter: 最大迭代次数 learning_rate: 学习率 precision: 收敛精度
 def gradient_descent(x, max_iter, learning_rate, precision):
     for i in range(max_iter):
         grad_value = obj_grad(x)
@@ -52,4 +45,4 @@ def gradient_descent(x, max_iter, learning_rate, precision):
 
 
 if __name__ == '__main__':
-    gradient_descent(-5, 100, 0.01, 0.0001)
+    gradient_descent(-5, 10000, 0.01, 0.000001)
