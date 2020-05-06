@@ -50,7 +50,11 @@ conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
 pip install -i https://pypi.douban.com/simple/ tensorflow-gpu==1.15
 
 ## 相关资料
-### 关于baseline和benchmark的说明
+### baseline、benchmark、state-of-the-art的区别
+- baseline就是基础的意思，等于业界最普通的水平
+- benchmark就是业界平均水平，偏中上，或者说是实验要达到的目标
+- state-of-the-art的意思是业界最佳
+#### 关于baseline和benchmark的说明
 https://www.zhihu.com/question/22529709
 ### end to end(端对端)模型的理解
 - 输入端（数据）-> 输出端（结果）,问题使用单个模型就可解决，例如使用单个CNN能实现图像识别，不像自然语言处理需要使用多个模型解决问题
