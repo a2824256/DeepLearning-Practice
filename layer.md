@@ -8,7 +8,7 @@ https://baijiahao.baidu.com/s?id=1601882944953788623&wfr=spider&for=pc
 #### 三种分解模块
 ##### 模块A<br/>
 ![model-a](./material_image/inception-network/model-a.jpg)<br/>
-##### 模块B<br/>
+##### 模块B, 空间非对称卷积<br/>
 ![model-b](./material_image/inception-network/model-b.jpg)<br/>
 ##### 模块C<br/>
 ![model-c](./material_image/inception-network/model-c.jpg)<br/>
